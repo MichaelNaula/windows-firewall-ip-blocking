@@ -31,10 +31,10 @@ I also used: nslookup facebook.com
 DNS, (Domain Name System), translates human-readable domain names such as facebook.com into IP addresses that computers can use to communicate across a network.
 The IPv4 address returned during the lookup was used as the remote IP address for the Windows Firewall rule.
 Screenshot 1a— IP Address Resolution Using Ping
- 
+ ![Ping result](../screenshots/01a-ip-address-ping.png)
 The screenshot shows the domain name and the IPv4 address returned by the ping command.
 Screenshot 1b— IP Address Resolution Using nslookup
- 
+ ![Ping result](../screenshots/01b-ip-address-nslookup.png)
 The screenshot shows the DNS lookup information returned by nslookup.
 
 **2. Testing the Website Before Blocking**
@@ -42,27 +42,26 @@ Before creating the firewall rule, I tested whether Facebook was reachable from 
 I opened: https://www.facebook.com
 The purpose of this step was to establish a baseline. This allowed me to compare the website's behavior before and after the firewall rule was enabled.
 Screenshot 2— Facebook Before Blocking
- 
+ ![Ping result](../screenshots/02-before-blocking.png)
 This screenshot provides evidence that Facebook was reachable before the firewall rule was enabled.
 
 **3. Creating the Windows Firewall Outbound Rule**
 I opened Windows Defender Firewall with Advanced Security by running: wf.msc
 Screenshot 3— Opening Windows Defender Firewall with Advanced Security
-
- 
+ ![Ping result](../screenshots/03-opening-windows-firewall-with-advanced-security.png)
 I then navigated to:
 Outbound Rules --> New Rule 
 I created a custom outbound rule and specified the IPv4 address obtained during the DNS resolution step.
 The rule was configured to apply to outbound traffic destined for the selected remote IP address.
 Screenshot 4— Firewall Rule Creation
- 
+ ![Ping result](../screenshots/04-Block-Facebook-IP.png)
 This screenshot shows the configuration of the outbound firewall rule.
 
 **4. Configuring the Rule to Block the Connection**
 The firewall rule was configured with the action: Block the connection
 This means Windows Firewall should prevent network traffic matching the rule from reaching the specified remote IP address.
 Screenshot 5— Rule Properties
- 
+ ![Ping result](../screenshots/05-rule-properties.png)
 This screenshot provides evidence that the firewall rule was configured to Block the connection.
 
 **5. Testing After Enabling the Firewall Rule**
@@ -71,15 +70,14 @@ Test Result
 After enabling the firewall rule, I attempted to access Facebook again. The website was blocked. This result demonstrated that blocking the selected IP address affected access to Facebook during this test.
 However, blocking one IP address does not necessarily guarantee that an entire website will always be inaccessible. Large websites can use multiple IP addresses and distributed network infrastructure.
 Screenshot 6— Website After Blocking
- 
+ ![Ping result](../screenshots/06-after-blocking.png)
 This screenshot provides evidence of the website's behavior after the firewall rule was enabled.
 
 **6. Disabling the Firewall Rule**
 After completing the blocking test, I disabled the firewall rule instead of deleting it. This allowed me to preserve the configuration while stopping the rule from actively blocking the matching traffic.
 I then tested access to Facebook again.
 Screenshot 7— Website After Disabling the Rule
-
- 
+![Ping result](../screenshots/07-after-disabling-the-rule.png)
 This screenshot provides evidence of the website's behavior after the firewall rule was disabled.
 
 **7. What I Learned**
@@ -151,7 +149,7 @@ Modern websites can operate across many servers and locations. Blocking a single
 5. IP Blocking Is Different From Domain Filtering
 A simple IP-based firewall rule does not inherently understand that an IP address represents a particular domain.
 It simply matches network traffic against the conditions specified in the firewall rule.
-11. Conclusion
+**11. Conclusion**
 This project demonstrated how Windows Defender Firewall can be used to create an outbound rule that blocks traffic to a specific IPv4 address.
 During this lab, I learned how to:
 •	Use ping and nslookup to perform DNS resolution.
@@ -164,7 +162,7 @@ During this lab, I learned how to:
 The most important lesson is that blocking an IP address does not necessarily mean blocking an entire website. Modern websites can use multiple IP addresses, distributed infrastructure, and CDNs. As a result, IP-based blocking can be incomplete and may not be a reliable method for blocking an entire website.
 This lab provided a practical introduction to Windows Firewall configuration and demonstrated an important concept in network security: the effectiveness of a firewall rule depends on exactly what traffic the rule matches and how the destination service is structured.
 
-**11. Project Structure**
+**12. Project Structure**
 The final project is organized as follows:
 windows-firewall-ip-blocking/
 │
@@ -173,16 +171,16 @@ windows-firewall-ip-blocking/
 ├── screenshots/
 │   ├── 01a-ip-address-ping.png
 │   ├── 01b-ip-address-nslookup.png
-│   ├── 02- Opening Windows Defender Firewall with Advanced Security
+│   ├── 02-opening-windows-firewall-with-advanced-security.png
 │   ├── 03-before-blocking.png
-│   ├── 04-firewall-rule.png
+|   ├── 04-Block-Facebook-IP.png
 │   ├── 05-rule-properties.png
 │   ├── 06-after-blocking.png
-│   └── 07-after-disabling.png
+│   └── 07-after-disabling-the-rule.png
 │
 └── notes/
     └── lab-notes.md
-Evidence
+**Evidence**
 The screenshots in this repository provide visual evidence of the main stages of the lab, including:
 •	IP address resolution using ping
 •	DNS resolution using nslookup
