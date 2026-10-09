@@ -77,7 +77,7 @@ This established a baseline for comparing the website's behavior before and afte
 
 **Screenshot 2 — Facebook Before Blocking**
 
-![Facebook before blocking](screenshots/03-before-blocking.png)
+![Facebook before blocking](screenshots/02-before-blocking.png)
 
 This screenshot provides evidence of Facebook's accessibility before the firewall rule was enabled.
 
@@ -97,7 +97,7 @@ I created an outbound firewall rule and specified the IPv4 address obtained duri
 
 **Screenshot 3 — Opening Windows Defender Firewall with Advanced Security**
 
-![Opening Windows Defender Firewall](screenshots/02-opening-windows-firewall-with-advanced-security.png)
+![Opening Windows Firewall](screenshots/03-opening-windows-firewall-with-advanced-security.png) 
 
 This screenshot shows the Windows Defender Firewall with Advanced Security console used to configure the outbound rule.
 
