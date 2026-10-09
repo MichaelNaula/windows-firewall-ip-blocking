@@ -93,7 +93,6 @@ wf.msc
 
 ![Opening Windows Firewall](screenshots/03-opening-windows-firewall-with-advanced-security.png) 
 
-This screenshot shows the Windows Defender Firewall with Advanced Security console used to configure the outbound rule.
 
 I then navigated to:
 
@@ -105,7 +104,7 @@ I created an outbound firewall rule and specified the IPv4 address obtained duri
 
 ![Firewall rule creation](screenshots/04-Block-Facebook-IP.png)
 
-This screenshot shows the configuration of the outbound firewall rule for the selected IP address.
+This screenshot shows the Windows Defender Firewall with Advanced Security console used to configure the outbound rule.
 
 ## 4. Configuring the Rule to Block the Connection
 
