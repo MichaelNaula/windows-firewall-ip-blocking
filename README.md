@@ -89,17 +89,17 @@ I opened Windows Defender Firewall with Advanced Security by running:
 wf.msc
 ```
 
-I then navigated to:
-
-**Outbound Rules → New Rule**
-
-I created an outbound firewall rule and specified the IPv4 address obtained during the DNS resolution step. The rule was configured to apply to outbound traffic destined for the selected remote IP address.
-
 **Screenshot 3 — Opening Windows Defender Firewall with Advanced Security**
 
 ![Opening Windows Firewall](screenshots/03-opening-windows-firewall-with-advanced-security.png) 
 
 This screenshot shows the Windows Defender Firewall with Advanced Security console used to configure the outbound rule.
+
+I then navigated to:
+
+**Outbound Rules → New Rule**
+
+I created an outbound firewall rule and specified the IPv4 address obtained during the DNS resolution step. The rule was configured to apply to outbound traffic destined for the selected remote IP address.
 
 **Screenshot 4 — Firewall Rule Creation**
 
