@@ -96,7 +96,7 @@ wf.msc
 
 I then navigated to:
 
-**Outbound Rules → New Rule**
+**Outbound Rules –> New Rule**
 
 I created an outbound firewall rule and specified the IPv4 address obtained during the DNS resolution step. The rule was configured to apply to outbound traffic destined for the selected remote IP address.
 
@@ -154,7 +154,7 @@ DNS stands for Domain Name System. It allows users to access websites through do
 
 For example:
 
-`facebook.com → DNS resolution → IP address`
+`facebook.com –> DNS resolution –> IP address`
 
 The `ping` and `nslookup` commands helped me identify IP addresses associated with the domain.
 
@@ -192,7 +192,7 @@ A firewall rule defines how the firewall handles network traffic that matches sp
 
 The basic concept demonstrated in this lab was:
 
-`Computer → Outbound traffic → Firewall rule → Block matching traffic`
+`Computer –> Outbound traffic –> Firewall rule –> Block matching traffic`
 
 When the rule was disabled, that rule no longer actively blocked matching traffic.
 
@@ -204,7 +204,7 @@ The firewall rule targeted a specific IP address rather than the text `facebook.
 
 The process can be represented as:
 
-`facebook.com → DNS resolution → IP address → Firewall rule → Block matching traffic`
+`facebook.com –> DNS resolution –> IP address –> Firewall rule –> Block matching traffic`
 
 The firewall blocks traffic matching the selected IP address and other rule conditions. It does not necessarily block every IP address associated with Facebook.
 
@@ -218,7 +218,7 @@ Because of this, blocking one IP address may not completely block access to a we
 
 For example:
 
-```text
+```
              facebook.com
                    |
           +--------+--------+

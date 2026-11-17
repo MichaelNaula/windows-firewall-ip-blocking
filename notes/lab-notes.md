@@ -77,7 +77,7 @@ Screenshot:
 
 I then selected:
 
-Outbound Rules → New Rule
+Outbound Rules –> New Rule
 
 Rule Configuration
 
@@ -154,7 +154,7 @@ Observation
 After disabling the firewall rule, I was able to access and log in to Facebook again. This confirmed that the rule was no longer actively blocking the matching traffic.
 
 Screenshot:
-![Ping result](../screenshots/07-after-disabling-the-rule.png)
+![Ping result](../screenshots/08-after-disabling-the-rule-again.png)
 
 Step 7 — Main Observations
 
@@ -179,7 +179,7 @@ DNS, or the Domain Name System, translates human-readable domain names into IP a
 
 Example:
 
-facebook.com → IPv4 address
+facebook.com –> IPv4 address
 
 This allows computers to identify and communicate with network destinations using IP addresses.
 
